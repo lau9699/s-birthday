@@ -148,17 +148,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-90px);
+  transform: translateX(-100px);
   animation: cardIntro 1.2s ease forwards;
 
 }
 
 .card.open {
-  transform: translateX(100px) scale(1.02);
+  transform: translateX(90px) scale(1.02);
 }
 
 .card.open .outside {
-  transform: rotateY(-145deg);
+  transform: rotateY(-165deg);
 }
 
 .outside,
