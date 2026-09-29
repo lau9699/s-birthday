@@ -58,9 +58,7 @@ x = setInterval(function () {
       charSpacing: window.innerWidth < 768 ? 22 : 35,
       lineHeight: window.innerWidth < 768 ? 28 : 40,
 
-      // cx: w / 2,
-      // cy: h / 2,
-      cx: w / 2 - 100,
+      cx: w / 2,
       cy: h / 2,
 
       fireworkPrevPoints: 10,
@@ -443,17 +441,33 @@ x = setInterval(function () {
     }
   }
 
-  for (let i = 0; i < opts.strings.length; ++i) {
-    for (let j = 0; j < opts.strings[i].length; ++j) {
+  // for (let i = 0; i < opts.strings.length; ++i) {
+  //   for (let j = 0; j < opts.strings[i].length; ++j) {
+  //     letters.push(
+  //       new Letter(
+  //         opts.strings[i][j],
+  //         j * opts.charSpacing +
+  //           opts.charSpacing / 2 -
+  //           (opts.strings[i].length * opts.charSize) / 2,
+  //         i * opts.lineHeight +
+  //           opts.lineHeight / 2 -
+  //           (opts.strings.length * opts.lineHeight) / 2
+  //       )
+  //     );
+  //   }
+  // }
+
+  for (let i = 0; i < opts.strings.length; i++) {
+    const lineWidth = (opts.strings[i].length - 1) * opts.charSpacing;
+
+    const startX = -lineWidth / 2;
+
+    for (let j = 0; j < opts.strings[i].length; j++) {
       letters.push(
         new Letter(
           opts.strings[i][j],
-          j * opts.charSpacing +
-            opts.charSpacing / 2 -
-            (opts.strings[i].length * opts.charSize) / 2,
-          i * opts.lineHeight +
-            opts.lineHeight / 2 -
-            (opts.strings.length * opts.lineHeight) / 2
+          startX + j * opts.charSpacing,
+          (i - (opts.strings.length - 1) / 2) * opts.lineHeight
         )
       );
     }
