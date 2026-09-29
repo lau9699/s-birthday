@@ -43,11 +43,8 @@ x = setInterval(function () {
     (distance % minute) / second
   );
 
-  // let w = (c.width = window.innerWidth),
-  //   h = (c.height = window.innerHeight),
-  const scale =
-    window.innerWidth <= 480 ? 0.5 : window.innerWidth <= 768 ? 0.7 : 1;
-    
+  let w = (c.width = window.innerWidth),
+    h = (c.height = window.innerHeight),
     ctx = c.getContext('2d'),
     hw = w / 2, // half-width
     hh = h / 2,
