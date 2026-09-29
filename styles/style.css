@@ -28,7 +28,7 @@ li {
   list-style-type: none;
   padding: 1rem;
   text-transform: uppercase;
-  font-size: clamp(10px, 2vw, 18px);
+  font-size: clamp(8px, 2vw, 18px);
 }
 
 li span {

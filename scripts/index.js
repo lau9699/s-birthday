@@ -60,7 +60,7 @@ x = setInterval(function () {
 
       // cx: w / 2,
       // cy: h / 2,
-      cx: w / 2,
+      cx: w / 2 - 20,
       cy: h / 2 - 80,
 
       fireworkPrevPoints: 10,
