@@ -45,13 +45,9 @@ x = setInterval(function () {
 
   // let w = (c.width = window.innerWidth),
   //   h = (c.height = window.innerHeight),
-  const scale = 1;
-  if (window.innerWidth <= 768) {
-    scale = 0.7;
-  }
-
-  let w = (c.width = window.innerWidth * scale),
-    h = (c.height = window.innerHeight * scale),
+  const scale =
+    window.innerWidth <= 480 ? 0.5 : window.innerWidth <= 768 ? 0.7 : 1;
+    
     ctx = c.getContext('2d'),
     hw = w / 2, // half-width
     hh = h / 2,
@@ -68,7 +64,7 @@ x = setInterval(function () {
       cx: w / 2,
       cy: h / 2,
 
-      fireworkPrevPoints: 5,
+      fireworkPrevPoints: 10,
       fireworkBaseLineWidth: 5,
       fireworkAddedLineWidth: 8,
       fireworkSpawnTime: 200,
@@ -80,8 +76,8 @@ x = setInterval(function () {
       fireworkCircleAddedTime: 30,
       fireworkCircleFadeBaseTime: 10,
       fireworkCircleFadeAddedTime: 5,
-      fireworkBaseShards: 3,
-      fireworkAddedShards: 2,
+      fireworkBaseShards: 5,
+      fireworkAddedShards: 5,
       fireworkShardPrevPoints: 3,
       fireworkShardBaseVel: 4,
       fireworkShardAddedVel: 2,
