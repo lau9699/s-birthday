@@ -148,7 +148,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(0);
+  transform: translateX(-120px);
   animation: cardIntro 1.2s ease forwards;
 
 }
