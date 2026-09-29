@@ -1,1 +1,54 @@
-<meta http-equiv="Refresh" content="0; url=birthday.html"/>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>For My Love</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/system-fonts.css" media="all" />
+    <link rel="stylesheet" href="styles/style.css" media="all" />
+    <link rel="icon" type="image/png" href="icon.png">
+  </head>
+
+  <body>
+    <canvas id="c"></canvas>
+    <canvas id="confetti"></canvas>
+    <div class="container" id="count">
+      <h1 id="head">Countdown to your birthday:</h1>
+      <ul>
+        <li><span id="day"></span>days</li>
+        <li><span id="hour"></span>hours</li>
+        <li><span id="minute"></span>minutes</li>
+        <li><span id="second"></span>seconds</li>
+      </ul>
+    </div>
+    <div id="app">
+      <div id="canvas-container"></div>
+
+      <div id="content" style="display: nont">
+        <div class="card-container">
+          <div class="card">
+            <div class="outside">
+              <div class="front"></div>
+
+              <div class="back">
+                <img src="back.png" alt="back" class="center-img" />
+              </div>
+            </div>
+
+            <div class="inside">
+              <p class="note">
+              Today isn't just a celebration of your birthday. It's a celebration of the fact that you exist. Sometimes I wonder how many little moments had to align perfectly for our paths to cross, and every time I do, I find myself feeling grateful all over again. Grateful that you were born, grateful that we met, and grateful that I get to love someone as incredible as you. The world became brighter the day you were born, and my life became brighter the day you walked into it.
+              </p>
+
+              <small class="bottom-note"> Love, Meme Au ♡ </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/confetti.min.js" charset="utf-8"></script>
+  <script src="scripts/index.js" charset="utf-8"></script>
+</html>
