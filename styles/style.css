@@ -154,7 +154,7 @@ body {
 }
 
 .card.open {
-  transform: translateX(105px) scale(1.02);
+  transform: translateX(100px) scale(1.02);
 }
 
 .card.open .outside {
