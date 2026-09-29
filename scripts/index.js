@@ -58,8 +58,10 @@ x = setInterval(function () {
       charSpacing: window.innerWidth < 768 ? 22 : 35,
       lineHeight: window.innerWidth < 768 ? 28 : 40,
 
+      // cx: w / 2,
+      // cy: h / 2,
       cx: w / 2,
-      cy: h / 2,
+      cy: h / 2 - 80,
 
       fireworkPrevPoints: 10,
       fireworkBaseLineWidth: 5,
