@@ -27,7 +27,7 @@ const second = 1000,
   day = hour * 24;
 
 // let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
-let countDown = new Date().getTime() + 5000; // 10 detik lagi
+let countDown = new Date().getTime() + 3000; // 10 detik lagi
 x = setInterval(function () {
   let now = new Date().getTime(),
     distance = countDown - now;
@@ -65,8 +65,8 @@ x = setInterval(function () {
       fireworkBaseLineWidth: 5,
       fireworkAddedLineWidth: 8,
       fireworkSpawnTime: 200,
-      fireworkBaseReachTime: 30,
-      fireworkAddedReachTime: 30,
+      fireworkBaseReachTime: 50,
+      fireworkAddedReachTime: 50,
       fireworkCircleBaseSize: 20,
       fireworkCircleAddedSize: 10,
       fireworkCircleBaseTime: 30,
@@ -82,8 +82,8 @@ x = setInterval(function () {
       fireworkShardAddedSize: 3,
       gravity: 0.1,
       upFlow: -0.1,
-      letterContemplatingWaitTime: 360,
-      balloonSpawnTime: 20,
+      letterContemplatingWaitTime: 480,
+      balloonSpawnTime: 30,
       balloonBaseInflateTime: 10,
       balloonAddedInflateTime: 10,
       balloonBaseSize: 20,
