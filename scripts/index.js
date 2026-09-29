@@ -27,7 +27,7 @@ const second = 1000,
   day = hour * 24;
 
 // let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
-let countDown = new Date().getTime() + 1000; // 10 detik lagi
+let countDown = new Date().getTime() + 5000; // 10 detik lagi
 x = setInterval(function () {
   let now = new Date().getTime(),
     distance = countDown - now;
@@ -43,8 +43,15 @@ x = setInterval(function () {
     (distance % minute) / second
   );
 
-  let w = (c.width = window.innerWidth),
-    h = (c.height = window.innerHeight),
+  // let w = (c.width = window.innerWidth),
+  //   h = (c.height = window.innerHeight),
+  const scale = 1;
+  if (window.innerWidth <= 768) {
+    scale = 0.7;
+  }
+
+  let w = (c.width = window.innerWidth * scale),
+    h = (c.height = window.innerHeight * scale),
     ctx = c.getContext('2d'),
     hw = w / 2, // half-width
     hh = h / 2,
@@ -61,20 +68,20 @@ x = setInterval(function () {
       cx: w / 2,
       cy: h / 2,
 
-      fireworkPrevPoints: 10,
+      fireworkPrevPoints: 5,
       fireworkBaseLineWidth: 5,
       fireworkAddedLineWidth: 8,
       fireworkSpawnTime: 200,
-      fireworkBaseReachTime: 50,
-      fireworkAddedReachTime: 50,
+      fireworkBaseReachTime: 30,
+      fireworkAddedReachTime: 30,
       fireworkCircleBaseSize: 20,
       fireworkCircleAddedSize: 10,
       fireworkCircleBaseTime: 30,
       fireworkCircleAddedTime: 30,
       fireworkCircleFadeBaseTime: 10,
       fireworkCircleFadeAddedTime: 5,
-      fireworkBaseShards: 5,
-      fireworkAddedShards: 5,
+      fireworkBaseShards: 3,
+      fireworkAddedShards: 2,
       fireworkShardPrevPoints: 3,
       fireworkShardBaseVel: 4,
       fireworkShardAddedVel: 2,
@@ -82,8 +89,8 @@ x = setInterval(function () {
       fireworkShardAddedSize: 3,
       gravity: 0.1,
       upFlow: -0.1,
-      letterContemplatingWaitTime: 480,
-      balloonSpawnTime: 30,
+      letterContemplatingWaitTime: 360,
+      balloonSpawnTime: 20,
       balloonBaseInflateTime: 10,
       balloonAddedInflateTime: 10,
       balloonBaseSize: 20,
