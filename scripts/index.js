@@ -27,7 +27,7 @@ const second = 1000,
   day = hour * 24;
 
 // let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
-let countDown = new Date().getTime() + 10000; // 10 detik lagi
+let countDown = new Date().getTime() + 3000; // 10 detik lagi
 x = setInterval(function () {
   let now = new Date().getTime(),
     distance = countDown - now;
